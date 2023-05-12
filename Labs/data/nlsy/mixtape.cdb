@@ -1,0 +1,5075 @@
+R00001.00    [PUBID]                                        Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             PUBID, YOUTH CASE IDENTIFICATION CODE
+ 
+COMMENT: YOUTH CASE IDENTIFICATION CODE
+ 
+       0           0
+     998           1 TO 999
+     999        1000 TO 1999
+     997        2000 TO 2999
+     996        3000 TO 3999
+     998        4000 TO 4999
+     996        5000 TO 5999
+     994        6000 TO 6999
+     994        7000 TO 7999
+     989        8000 TO 8999
+      23        9000 TO 9999
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:           9022        Mean:              4504.3
+ 
+Lead In: R72976.00[Default]
+Default Next Question: R05363.00
+--------------------------------------------------------------------------------
+R05363.00    [KEY!SEX]                                      Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!SEX, RS GENDER (SYMBOL)
+ 
+COMMENT: Gender of Youth
+ 
+    4599       1 Male
+    4385       2 Female
+       0       0 No Information
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: R00001.00[Default]
+Default Next Question: R05364.00
+--------------------------------------------------------------------------------
+R05364.01    [KEY!BDATE_M]                                  Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!BDATE, RS BIRTHDATE MONTH/YEAR (SYMBOL)
+ 
+COMMENT: Birthdate of Youth
+ 
+     816           1: January
+     693           2: February
+     760           3: March
+     659           4: April
+     689           5: May
+     720           6: June
+     762           7: July
+     782           8: August
+     839           9: September
+     765          10: October
+     763          11: November
+     736          12: December
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             12        Mean:                6.56
+ 
+Earliest (NonMissing): JANUARY/1980
+Latest   (NonMissing): DECEMBER/1984
+ 
+Lead In: None.
+Default Next Question: R05364.02
+--------------------------------------------------------------------------------
+R05364.02    [KEY!BDATE_Y]                                  Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!BDATE, RS BIRTHDATE MONTH/YEAR (SYMBOL)
+ 
+COMMENT: Birthdate of Youth
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:           1980        Max:           1984        Mean:             1982.01
+ 
+Earliest (NonMissing): JANUARY/1980
+Latest   (NonMissing): DECEMBER/1984
+ 
+Lead In: R05364.01[Default]
+Default Next Question: R05366.00
+--------------------------------------------------------------------------------
+R12045.00    [CV_INCOME_GROSS_YR]                           Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             GROSS HH INCOME IN PAST YEAR
+ 
+Gross household income in the previous year.
+ 
+NOTE: /*Topcoded at the 2% level.  Truncated values are applied to the top 2 
+percent of respondents with valid non-missing responses.  The average value of 
+the top 2 percent of cases is used as the value.  Negative values of -1, -2, -3,
+-4, or -5 do not reflect negative monetary amounts; these numbers represent 
+standard NLSY97 codes.*/
+ 
+       3     -999999 TO -3000: < -2999
+       0       -2999 TO -2000
+       0       -1999 TO -1000
+       0        -999 TO -1
+     100           0
+      71           1 TO 1000
+      41        1001 TO 2000
+      98        2001 TO 3000
+     139        3001 TO 5000
+     465        5001 TO 10000
+     925       10001 TO 20000
+     819       20001 TO 30000
+     835       30001 TO 40000
+     765       40001 TO 50000
+     834       50001 TO 65000
+     610       65001 TO 80000
+     397       80001 TO 100000
+     321      100001 TO 150000
+      32      150001 TO 200000
+     133      200001 TO 999999: 200001+
+  -------
+    6588
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)    1458
+TOTAL =========>    8046   VALID SKIP(-4)     938     NON-INTERVIEW(-5)       0
+ 
+Min:         -48100        Max:         246474        Mean:             46361.7
+ 
+Lead In: R13027.00[Default]
+Default Next Question: R12046.00
+--------------------------------------------------------------------------------
+R12358.00    [CV_SAMPLE_TYPE]                               Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             SAMPLE TYPE.  CROSS-SECTIONAL OR OVERSAMPLE
+ 
+Sample type: Is the respondent a member of the cross-sectional sample or the 
+oversample?
+ 
+    6748       1 Cross-sectional
+    2236       0 Oversample
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .75
+ 
+Lead In: R12338.00[Default]
+Default Next Question: R12359.00
+--------------------------------------------------------------------------------
+R12506.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       8       1 Public institution
+       1       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>      11   VALID SKIP(-4)    8973     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              2        Mean:                1.11
+ 
+Lead In: R14898.00[Default]
+Default Next Question: R12085.02
+--------------------------------------------------------------------------------
+R13024.00    [CV_HGC_BIO_DAD]                               Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             BIOLOGICAL FATHERS HIGHEST GRADE COMPLETED
+ 
+Highest grade completed by respondent's biological father (includes both 
+residential and non-residential fathers).
+ 
+       0       0 NONE
+       1       1 1ST GRADE
+      19       2 2ND GRADE
+      68       3 3RD GRADE
+      59       4 4TH GRADE
+      68       5 5TH GRADE
+     188       6 6TH GRADE
+      92       7 7TH GRADE
+     169       8 8TH GRADE
+     240       9 9TH GRADE
+     329      10 10TH GRADE
+     396      11 11TH GRADE
+    2728      12 12TH GRADE
+     381      13 1ST YEAR COLLEGE
+     736      14 2ND YEAR COLLEGE
+     176      15 3RD YEAR COLLEGE
+     840      16 4TH YEAR COLLEGE
+     113      17 5TH YEAR COLLEGE
+     270      18 6TH YEAR COLLEGE
+      85      19 7TH YEAR COLLEGE
+     162      20 8TH YEAR COLLEGE OR MORE
+       8      95 UNGRADED
+  -------
+    7128
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)    1188
+TOTAL =========>    8316   VALID SKIP(-4)     668     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             95        Mean:               12.66
+ 
+Lead In: R12044.00[Default]
+Default Next Question: R13025.00
+--------------------------------------------------------------------------------
+R13025.00    [CV_HGC_BIO_MOM]                               Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             BIOLOGICAL MOTHERS HIGHEST GRADE COMPLETED
+ 
+Highest grade completed by respondent's biological mother (includes both 
+residential and non-residential mothers).
+ 
+       0       0 NONE
+       6       1 1ST GRADE
+      29       2 2ND GRADE
+      54       3 3RD GRADE
+      52       4 4TH GRADE
+      57       5 5TH GRADE
+     222       6 6TH GRADE
+      69       7 7TH GRADE
+     205       8 8TH GRADE
+     273       9 9TH GRADE
+     428      10 10TH GRADE
+     562      11 11TH GRADE
+    3038      12 12TH GRADE
+     642      13 1ST YEAR COLLEGE
+    1002      14 2ND YEAR COLLEGE
+     248      15 3RD YEAR COLLEGE
+     908      16 4TH YEAR COLLEGE
+     157      17 5TH YEAR COLLEGE
+     227      18 6TH YEAR COLLEGE
+      34      19 7TH YEAR COLLEGE
+      77      20 8TH YEAR COLLEGE OR MORE
+       6      95 UNGRADED
+  -------
+    8296
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     523
+TOTAL =========>    8819   VALID SKIP(-4)     165     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             95        Mean:                12.5
+ 
+Lead In: R13024.00[Default]
+Default Next Question: R13026.00
+--------------------------------------------------------------------------------
+R14826.00    [KEY!RACE_ETHNICITY]                           Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!RACE_ETHNICITY, COMBINED RACE AND ETHNICITY (SYMBOL)
+ 
+COMMENT: Combined race - ethnicity variable
+ 
+    2335       1 Black
+    1901       2 Hispanic
+      83       3 Mixed Race (Non-Hispanic)
+    4665       4 Non-Black / Non-Hispanic
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              4        Mean:                2.79
+ 
+Lead In: R05387.00[Default]
+Default Next Question: R05389.00
+--------------------------------------------------------------------------------
+R17703.00    [YSCH-23450.01]                                Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       1       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To R17076.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    8385     NON-INTERVIEW(-5)     598
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: R17690.00[1:1]
+Default Next Question: R17707.00
+--------------------------------------------------------------------------------
+R17704.00    [YSCH-23450.02]                                Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      20       7 No degree received   (Go To R17077.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+      20
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      20   VALID SKIP(-4)    8366     NON-INTERVIEW(-5)     598
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R17691.00[1:1]
+Default Next Question: R17077.00
+--------------------------------------------------------------------------------
+R17705.00    [YSCH-23450.03]                                Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       5       7 No degree received   (Go To R17078.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5   VALID SKIP(-4)    8381     NON-INTERVIEW(-5)     598
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R17692.00[1:1]
+Default Next Question: R17078.00
+--------------------------------------------------------------------------------
+R17706.00    [YSCH-23450.04]                                Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 04?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To R17079.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    8385     NON-INTERVIEW(-5)     598
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R17693.00[1:1]
+Default Next Question: R17079.00
+--------------------------------------------------------------------------------
+R26091.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      13       1 Public institution
+       1       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+      14
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>      16   VALID SKIP(-4)    8370     NON-INTERVIEW(-5)     598
+ 
+Min:              1        Max:              2        Mean:                1.07
+ 
+Lead In: R39894.00[Default]
+Default Next Question: R26092.00
+--------------------------------------------------------------------------------
+R26092.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     372       1 Public institution
+      79       2 Private not-for-profit institution
+      13       3 Private for-profit institution
+  -------
+     464
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       5
+TOTAL =========>     469   VALID SKIP(-4)    7917     NON-INTERVIEW(-5)     598
+ 
+Min:              1        Max:              3        Mean:                1.23
+ 
+Lead In: R26091.00[Default]
+Default Next Question: R26093.00
+--------------------------------------------------------------------------------
+R26093.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      46       1 Public institution
+       4       2 Private not-for-profit institution
+       3       3 Private for-profit institution
+  -------
+      53
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       5
+TOTAL =========>      58   VALID SKIP(-4)    8328     NON-INTERVIEW(-5)     598
+ 
+Min:              1        Max:              3        Mean:                1.19
+ 
+Lead In: R26092.00[Default]
+Default Next Question: R26094.00
+--------------------------------------------------------------------------------
+R26094.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       3       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       4
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       4   VALID SKIP(-4)    8382     NON-INTERVIEW(-5)     598
+ 
+Min:              1        Max:              3        Mean:                 1.5
+ 
+Lead In: R26093.00[Default]
+Default Next Question: R26095.00
+--------------------------------------------------------------------------------
+R26095.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    8385     NON-INTERVIEW(-5)     598
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: R26094.00[Default]
+Default Next Question: R25672.02
+--------------------------------------------------------------------------------
+R30699.00    [YSCH-23450.01]                                Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       3       1 Associate/Junior College or two-year associate degree (AA)
+       4       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      11       7 No degree received   (Go To R30010.00)
+       5       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+      23
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      23   VALID SKIP(-4)    8185     NON-INTERVIEW(-5)     776
+ 
+Min:              1        Max:              8        Mean:                5.57
+ 
+Lead In: R30688.00[1:1]
+Default Next Question: R30702.00
+--------------------------------------------------------------------------------
+R30700.00    [YSCH-23450.02]                                Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       2       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      27       7 No degree received   (Go To R30011.00)
+       3       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+      33
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      33   VALID SKIP(-4)    8175     NON-INTERVIEW(-5)     776
+ 
+Min:              2        Max:              8        Mean:                6.67
+ 
+Lead In: R30689.00[1:1]
+Default Next Question: R30703.00
+--------------------------------------------------------------------------------
+R30701.00    [YSCH-23450.03]                                Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       2       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       6       7 No degree received   (Go To R30012.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+  -------
+       8
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       8   VALID SKIP(-4)    8200     NON-INTERVIEW(-5)     776
+ 
+Min:              2        Max:              7        Mean:                5.75
+ 
+Lead In: R30690.00[1:1]
+Default Next Question: R30704.00
+--------------------------------------------------------------------------------
+R39399.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     371       1 Public institution
+      76       2 Private not-for-profit institution
+      20       3 Private for-profit institution
+  -------
+     467
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      10
+TOTAL =========>     477   VALID SKIP(-4)    7731     NON-INTERVIEW(-5)     776
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: R38276.00[Default]
+Default Next Question: R39400.00
+--------------------------------------------------------------------------------
+R39400.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     695       1 Public institution
+     163       2 Private not-for-profit institution
+      33       3 Private for-profit institution
+  -------
+     891
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      15
+TOTAL =========>     906   VALID SKIP(-4)    7302     NON-INTERVIEW(-5)     776
+ 
+Min:              1        Max:              3        Mean:                1.26
+ 
+Lead In: R39399.00[Default]
+Default Next Question: R39401.00
+--------------------------------------------------------------------------------
+R39401.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      33       1 Public institution
+       5       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+      39
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       4
+TOTAL =========>      43   VALID SKIP(-4)    8165     NON-INTERVIEW(-5)     776
+ 
+Min:              1        Max:              3        Mean:                1.18
+ 
+Lead In: R39400.00[Default]
+Default Next Question: R39402.00
+--------------------------------------------------------------------------------
+R39402.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       3       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>       4   VALID SKIP(-4)    8204     NON-INTERVIEW(-5)     776
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: R39401.00[Default]
+Default Next Question: R39403.00
+--------------------------------------------------------------------------------
+R39403.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    8207     NON-INTERVIEW(-5)     776
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: R39402.00[Default]
+Default Next Question: R38889.02
+--------------------------------------------------------------------------------
+R43553.00    [YSCH-23450.01]                                Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      11       1 Associate/Junior College or two-year associate degree (AA)
+       7       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      40       7 No degree received   (Go To R42666.00)
+       6       8 OTHER (SPECIFY)
+       1       9 GED
+       0     999 UNCODABLE
+  -------
+      66
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      66   VALID SKIP(-4)    8014     NON-INTERVIEW(-5)     904
+ 
+Min:              1        Max:              9        Mean:                5.53
+ 
+Lead In: R43541.00[1:1]
+Default Next Question: R43556.00
+--------------------------------------------------------------------------------
+R43554.00    [YSCH-23450.02]                                Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       4       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      48       7 No degree received   (Go To R42667.00)
+       1       8 OTHER (SPECIFY)
+       1       9 GED
+       0     999 UNCODABLE
+  -------
+      55
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      55   VALID SKIP(-4)    8025     NON-INTERVIEW(-5)     904
+ 
+Min:              1        Max:              9        Mean:                6.58
+ 
+Lead In: R43542.00[1:1]
+Default Next Question: R43557.00
+--------------------------------------------------------------------------------
+R43555.00    [YSCH-23450.03]                                Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       7       7 No degree received   (Go To R42668.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       7
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       7   VALID SKIP(-4)    8073     NON-INTERVIEW(-5)     904
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R43543.00[1:1]
+Default Next Question: R43558.00
+--------------------------------------------------------------------------------
+R55354.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1000       1 Public institution
+     212       2 Private not-for-profit institution
+      49       3 Private for-profit institution
+  -------
+    1261
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      17
+TOTAL =========>    1278   VALID SKIP(-4)    6802     NON-INTERVIEW(-5)     904
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: R55186.00[Default]
+Default Next Question: R55355.00
+--------------------------------------------------------------------------------
+R55355.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     804       1 Public institution
+     151       2 Private not-for-profit institution
+      40       3 Private for-profit institution
+  -------
+     995
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      26
+TOTAL =========>    1021   VALID SKIP(-4)    7059     NON-INTERVIEW(-5)     904
+ 
+Min:              1        Max:              3        Mean:                1.23
+ 
+Lead In: R55354.00[Default]
+Default Next Question: R55356.00
+--------------------------------------------------------------------------------
+R55356.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      43       1 Public institution
+       5       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+      48
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      51   VALID SKIP(-4)    8029     NON-INTERVIEW(-5)     904
+ 
+Min:              1        Max:              2        Mean:                 1.1
+ 
+Lead In: R55355.00[Default]
+Default Next Question: R55357.00
+--------------------------------------------------------------------------------
+R55357.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    8078     NON-INTERVIEW(-5)     904
+ 
+Min:              1        Max:              3        Mean:                   2
+ 
+Lead In: R55356.00[Default]
+Default Next Question: R54710.02
+--------------------------------------------------------------------------------
+R60305.00    [YSCH-23450.01]                                Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      28       1 Associate/Junior College or two-year associate degree (AA)
+      15       2 Vocational or technical certificate
+      10       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      87       7 No degree received   (Go To R59244.00)
+       4       8 OTHER (SPECIFY)
+       6       9 GED
+       0     999 UNCODABLE
+  -------
+     150
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     150   VALID SKIP(-4)    7732     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              9        Mean:                5.22
+ 
+Lead In: R60291.00[1:1]
+Default Next Question: R60311.00
+--------------------------------------------------------------------------------
+R60306.00    [YSCH-23450.02]                                Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+      11       2 Vocational or technical certificate
+       3       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      72       7 No degree received   (Go To R59245.00)
+       2       8 OTHER (SPECIFY)
+       2       9 GED
+       0     999 UNCODABLE
+  -------
+      90
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      90   VALID SKIP(-4)    7792     NON-INTERVIEW(-5)    1102
+ 
+Min:              2        Max:              9        Mean:                6.32
+ 
+Lead In: R60292.00[1:1]
+Default Next Question: R60312.00
+--------------------------------------------------------------------------------
+R60307.00    [YSCH-23450.03]                                Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       7       7 No degree received   (Go To R59246.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       8
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       8   VALID SKIP(-4)    7874     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              7        Mean:                6.25
+ 
+Lead In: R60293.00[1:1]
+Default Next Question: R60313.00
+--------------------------------------------------------------------------------
+R60308.00    [YSCH-23450.04]                                Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 04?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To R59247.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7880     NON-INTERVIEW(-5)    1102
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R60294.00[1:1]
+Default Next Question: R59247.00
+--------------------------------------------------------------------------------
+R60309.00    [YSCH-23450.05]                                Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 05?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To R59248.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7881     NON-INTERVIEW(-5)    1102
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R60295.00[1:1]
+Default Next Question: R59248.00
+--------------------------------------------------------------------------------
+R60310.00    [YSCH-23450.06]                                Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 06?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To R60320.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7881     NON-INTERVIEW(-5)    1102
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: R60296.00[1:1]
+Default Next Question: R60320.00
+--------------------------------------------------------------------------------
+R72959.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1572       1 Public institution
+     321       2 Private not-for-profit institution
+      87       3 Private for-profit institution
+  -------
+    1980
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      41
+TOTAL =========>    2021   VALID SKIP(-4)    5861     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: R68855.00[Default]  R68859.00[1:1] R68860.00[1:1]
+Default Next Question: R72960.00
+--------------------------------------------------------------------------------
+R72960.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     865       1 Public institution
+     171       2 Private not-for-profit institution
+      46       3 Private for-profit institution
+  -------
+    1082
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      35
+TOTAL =========>    1117   VALID SKIP(-4)    6765     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              3        Mean:                1.24
+ 
+Lead In: R72959.00[Default]
+Default Next Question: R72961.00
+--------------------------------------------------------------------------------
+R72961.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      63       1 Public institution
+       4       2 Private not-for-profit institution
+       2       3 Private for-profit institution
+  -------
+      69
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>      71   VALID SKIP(-4)    7811     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              3        Mean:                1.12
+ 
+Lead In: R72960.00[Default]
+Default Next Question: R72962.00
+--------------------------------------------------------------------------------
+R72962.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       4       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       4
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       4   VALID SKIP(-4)    7878     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: R72961.00[Default]
+Default Next Question: R72963.00
+--------------------------------------------------------------------------------
+R72963.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       2       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7880     NON-INTERVIEW(-5)    1102
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: R72962.00[Default]
+Default Next Question: R72964.00
+--------------------------------------------------------------------------------
+R72964.00    [CV_COLLEGE_TYPE.06]                           Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 06 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       0       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7881     NON-INTERVIEW(-5)    1102
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: R72963.00[Default]
+Default Next Question: R72349.02
+--------------------------------------------------------------------------------
+R98296.00    [ASVAB_MATH_VERBAL_SCORE_PCT]                  Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             ASVAB MATH_VERBAL SCORE PERCENT
+ 
+To calculate the ASVAB_MATH_VERBAL_SCORE_PCT, NLS Program staff first grouped 
+respondents into three-month age groups.  That is, the oldest cohort included 
+those born from January through March of 1980, while the youngest were born from
+October through December 1984 (a total of 20 cohorts, with an average of about 
+350 respondents per cohort).  Custom sampling weights (computed for the sample 
+of 7,093 respondents who have scores on all four exams) were assigned for each 
+respondent's scores.  Within each three-month age group and using the sampling 
+weights, we assigned percentiles for the theta scores for the tests on 
+Mathematical Knowledge (MK), Arithmetic Reasoning (AR), Word Knowledge (WK), and
+Paragraph Comprehension (PC) based on the weighted number of respondents scoring
+below each score.  We added the percentile scores for WK and PC to get an 
+aggregate Verbal score (V) for which an aggregated intra-group, internally 
+normed, percentile was then computed.  NLS Program staff then added the 
+percentile scores for MK, AR and two times the aggregated percentile for V.  
+Finally, within each group we computed a percentile score, using the weights, on
+this aggregate score, yielding a final value between zero and 99.
+ 
+COMMENT: USERS SHOULD NOTE THAT, ALTHOUGH THE FORMULA IS SIMILAR TO THE AFQT 
+SCORE GENERATED BY THE DEPARTMENT OF DEFENSE FOR THE NLSY79 COHORT, THIS 
+VARIABLE REFLECTS WORK DONE BY NLS PROGRAM STAFF AND IS NEITHER GENERATED NOR 
+ENDORSED BY DOD.  FOR MORE DETAILS, USERS SHOULD READ THE NLSY97 USER'S GUIDE 
+SECTION ON THE ADMINISTRATION OF THE CAT-ASVAB, ASVAB_MATH_VERBAL SCORE_PCT.
+ 
+NOTE: Please see appendix 10 in the codebook supplement for more information on 
+the ASVAB.
+NOTE:  3 IMPLIED DECIMAL PLACES
+ 
+      20           0
+      85           1 TO 999: .001-.999
+    1728        1000 TO 19999: 1.000-19.999
+    1509       20000 TO 39999: 20.000-39.999
+    1332       40000 TO 59999: 40.000-59.999
+    1247       60000 TO 79999: 60.000-79.999
+    1172       80000 TO 100000: 80.000-100.000
+  -------
+    7093
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7093   VALID SKIP(-4)    1891     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:         100000        Mean:            45317.19
+ 
+Lead In: R97127.00[Default]
+Default Next Question: R97128.00
+--------------------------------------------------------------------------------
+S04433.00    [YSCH-23450.01]                                Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      63       1 Associate/Junior College or two-year associate degree (AA)
+       5       2 Vocational or technical certificate
+      83       3 Bachelor's degree (BA, BS or  unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      71       7 No degree received   (Go To S03002.00)
+       2       8 OTHER (SPECIFY)
+       0       9 OTHER - RECODED TO GED
+       0     995 SUPERVISOR REVIEW
+       0     999 UNCODABLE
+  -------
+     225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     225   VALID SKIP(-4)    7671     NON-INTERVIEW(-5)    1088
+ 
+Min:              1        Max:              8        Mean:                3.73
+ 
+Lead In: S04420.00[1:1]
+Default Next Question: S04437.00
+--------------------------------------------------------------------------------
+S04434.00    [YSCH-23450.02]                                Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       2       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       1       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      18       7 No degree received   (Go To S03003.00)
+       0       8 OTHER (SPECIFY)
+       0       9 OTHER - RECODED TO GED
+       0     995 SUPERVISOR REVIEW
+       0     999 UNCODABLE
+  -------
+      21
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      21   VALID SKIP(-4)    7875     NON-INTERVIEW(-5)    1088
+ 
+Min:              1        Max:              7        Mean:                6.33
+ 
+Lead In: S04421.00[1:1]
+Default Next Question: S04438.00
+--------------------------------------------------------------------------------
+S04435.00    [YSCH-23450.03]                                Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To S03004.00)
+       0       8 OTHER (SPECIFY)
+       0       9 OTHER - RECODED TO GED
+       0     995 SUPERVISOR REVIEW
+       0     999 UNCODABLE
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7894     NON-INTERVIEW(-5)    1088
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: S04422.00[1:1]
+Default Next Question: S03004.00
+--------------------------------------------------------------------------------
+S04436.00    [YSCH-23450.05]                                Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 05?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To S04444.00)
+       0       8 OTHER (SPECIFY)
+       0       9 OTHER - RECODED TO GED
+       0     995 SUPERVISOR REVIEW
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7895     NON-INTERVIEW(-5)    1088
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: S04424.00[1:1]
+Default Next Question: S04444.00
+--------------------------------------------------------------------------------
+S16188.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    2111       1 Public institution
+     438       2 Private not-for-profit institution
+     123       3 Private for-profit institution
+  -------
+    2672
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      62
+TOTAL =========>    2734   VALID SKIP(-4)    5162     NON-INTERVIEW(-5)    1088
+ 
+Min:              1        Max:              3        Mean:                1.26
+ 
+Lead In: None.
+Default Next Question: S16189.00
+--------------------------------------------------------------------------------
+S16189.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     984       1 Public institution
+     171       2 Private not-for-profit institution
+      34       3 Private for-profit institution
+  -------
+    1189
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      27
+TOTAL =========>    1216   VALID SKIP(-4)    6680     NON-INTERVIEW(-5)    1088
+ 
+Min:              1        Max:              3        Mean:                 1.2
+ 
+Lead In: S16188.00[Default]
+Default Next Question: S16190.00
+--------------------------------------------------------------------------------
+S16190.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      67       1 Public institution
+      10       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+      78
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>      80   VALID SKIP(-4)    7816     NON-INTERVIEW(-5)    1088
+ 
+Min:              1        Max:              3        Mean:                1.15
+ 
+Lead In: S16189.00[Default]
+Default Next Question: S16191.00
+--------------------------------------------------------------------------------
+S16191.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       8       1 Public institution
+       1       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+      10
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      10   VALID SKIP(-4)    7886     NON-INTERVIEW(-5)    1088
+ 
+Min:              1        Max:              3        Mean:                 1.3
+ 
+Lead In: S16190.00[Default]
+Default Next Question: S15494.02
+--------------------------------------------------------------------------------
+S19990.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    2602       1 Public institution
+     537       2 Private not-for-profit institution
+     139       3 Private for-profit institution
+  -------
+    3278
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      42
+TOTAL =========>    3320   VALID SKIP(-4)    4434     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: None.
+Default Next Question: S19991.00
+--------------------------------------------------------------------------------
+S19991.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     593       1 Public institution
+     104       2 Private not-for-profit institution
+      39       3 Private for-profit institution
+  -------
+     736
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      28
+TOTAL =========>     764   VALID SKIP(-4)    6990     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: S19990.00[Default]
+Default Next Question: S19992.00
+--------------------------------------------------------------------------------
+S19992.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      34       1 Public institution
+       3       2 Private not-for-profit institution
+       2       3 Private for-profit institution
+  -------
+      39
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      39   VALID SKIP(-4)    7715     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              3        Mean:                1.18
+ 
+Lead In: S19991.00[Default]
+Default Next Question: S19993.00
+--------------------------------------------------------------------------------
+S19993.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       2       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7752     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: S19992.00[Default]
+Default Next Question: S19994.00
+--------------------------------------------------------------------------------
+S19994.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       2       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7752     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: S19993.00[Default]
+Default Next Question: S20194.02
+--------------------------------------------------------------------------------
+S24719.00    [YSCH-23450.01]                                Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      86       1 Associate/Junior College or two-year associate degree (AA)
+       3       2 Vocational or technical certificate
+     206       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      77       7 No degree received   (Go To S23392.00)
+       6       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+     378
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     379   VALID SKIP(-4)    7375     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              8        Mean:                3.43
+ 
+Lead In: S24708.00[1:1]
+Default Next Question: S24722.00
+--------------------------------------------------------------------------------
+S24720.00    [YSCH-23450.02]                                Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       3       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      22       7 No degree received   (Go To S23393.00)
+       1       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      27   VALID SKIP(-4)    7727     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              8        Mean:                6.37
+ 
+Lead In: S24709.00[1:1]
+Default Next Question: S24723.00
+--------------------------------------------------------------------------------
+S24721.00    [YSCH-23450.03]                                Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [this school]?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To S23394.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7753     NON-INTERVIEW(-5)    1230
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: S24710.00[1:1]
+Default Next Question: S24724.00
+--------------------------------------------------------------------------------
+S37990.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    2513       1 Public institution
+     482       2 Private not-for-profit institution
+     158       3 Private for-profit institution
+  -------
+    3153
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      50
+TOTAL =========>    3203   VALID SKIP(-4)    4299     NON-INTERVIEW(-5)    1482
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: None.
+Default Next Question: S37991.00
+--------------------------------------------------------------------------------
+S37991.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     340       1 Public institution
+      62       2 Private not-for-profit institution
+      30       3 Private for-profit institution
+  -------
+     432
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      22
+TOTAL =========>     454   VALID SKIP(-4)    7048     NON-INTERVIEW(-5)    1482
+ 
+Min:              1        Max:              3        Mean:                1.28
+ 
+Lead In: S37990.00[Default]
+Default Next Question: S37992.00
+--------------------------------------------------------------------------------
+S37992.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      21       1 Public institution
+       6       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>      29   VALID SKIP(-4)    7473     NON-INTERVIEW(-5)    1482
+ 
+Min:              1        Max:              2        Mean:                1.22
+ 
+Lead In: S37991.00[Default]
+Default Next Question: S37993.00
+--------------------------------------------------------------------------------
+S37993.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       1       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7500     NON-INTERVIEW(-5)    1482
+ 
+Min:              1        Max:              2        Mean:                 1.5
+ 
+Lead In: S37992.00[Default]
+Default Next Question: S38209.02
+--------------------------------------------------------------------------------
+S42131.00    [YSCH-23450.01]                                Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      93       1 Associate/Junior College or two-year associate degree (AA)
+       3       2 Vocational or technical certificate
+     220       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+     104       7 No degree received   (Go To S41107.00)
+       7       8 OTHER (SPECIFY)
+       0       9 GED
+       1     999 UNCODABLE
+  -------
+     428
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     428   VALID SKIP(-4)    7074     NON-INTERVIEW(-5)    1482
+ 
+Min:              1        Max:            999        Mean:                5.94
+ 
+Lead In: S42109.00[1:1]
+Default Next Question: S42134.00
+--------------------------------------------------------------------------------
+S42132.00    [YSCH-23450.02]                                Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       4       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      16       7 No degree received   (Go To S41108.00)
+       1       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+      22
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      23   VALID SKIP(-4)    7479     NON-INTERVIEW(-5)    1482
+ 
+Min:              1        Max:              8        Mean:                6.05
+ 
+Lead In: S42110.00[1:1]
+Default Next Question: S42135.00
+--------------------------------------------------------------------------------
+S42133.00    [YSCH-23450.03]                                Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To S41109.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7500     NON-INTERVIEW(-5)    1482
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: S42111.00[1:1]
+Default Next Question: S41109.00
+--------------------------------------------------------------------------------
+S53990.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    2144       1 Public institution
+     437       2 Private not-for-profit institution
+     171       3 Private for-profit institution
+  -------
+    2752
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      40
+TOTAL =========>    2792   VALID SKIP(-4)    4546     NON-INTERVIEW(-5)    1646
+ 
+Min:              1        Max:              3        Mean:                1.28
+ 
+Lead In: None.
+Default Next Question: S53991.00
+--------------------------------------------------------------------------------
+S53991.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     250       1 Public institution
+      47       2 Private not-for-profit institution
+      30       3 Private for-profit institution
+  -------
+     327
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      15
+TOTAL =========>     342   VALID SKIP(-4)    6996     NON-INTERVIEW(-5)    1646
+ 
+Min:              1        Max:              3        Mean:                1.33
+ 
+Lead In: S53990.00[Default]
+Default Next Question: S53992.00
+--------------------------------------------------------------------------------
+S53992.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      12       1 Public institution
+       2       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+      14
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      14   VALID SKIP(-4)    7324     NON-INTERVIEW(-5)    1646
+ 
+Min:              1        Max:              2        Mean:                1.14
+ 
+Lead In: S53991.00[Default]
+Default Next Question: S53993.00
+--------------------------------------------------------------------------------
+S53993.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       2       1 Public institution
+       1       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       4
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       4   VALID SKIP(-4)    7334     NON-INTERVIEW(-5)    1646
+ 
+Min:              1        Max:              3        Mean:                1.75
+ 
+Lead In: S53992.00[Default]
+Default Next Question: S54210.02
+--------------------------------------------------------------------------------
+S58055.00    [YSCH-23450.01]                                Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      79       1 Associate/Junior College or two-year associate degree (AA)
+       7       2 Vocational or technical certificate
+     257       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      72       7 No degree received   (Go To S56702.00)
+       4       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+     419
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     419   VALID SKIP(-4)    6919     NON-INTERVIEW(-5)    1646
+ 
+Min:              1        Max:              8        Mean:                3.34
+ 
+Lead In: S58036.00[1:1]
+Default Next Question: S58058.00
+--------------------------------------------------------------------------------
+S58056.00    [YSCH-23450.02]                                Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       1       2 Vocational or technical certificate
+       4       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      11       7 No degree received   (Go To S56703.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+      16
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      16   VALID SKIP(-4)    7322     NON-INTERVIEW(-5)    1646
+ 
+Min:              2        Max:              7        Mean:                5.69
+ 
+Lead In: S58037.00[1:1]
+Default Next Question: S58059.00
+--------------------------------------------------------------------------------
+S58057.00    [YSCH-23450.03]                                Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To S56704.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7337     NON-INTERVIEW(-5)    1646
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: S58038.00[1:1]
+Default Next Question: S58060.00
+--------------------------------------------------------------------------------
+S74990.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1838       1 Public institution
+     374       2 Private not-for-profit institution
+     189       3 Private for-profit institution
+  -------
+    2401
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      50
+TOTAL =========>    2451   VALID SKIP(-4)    5108     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              3        Mean:                1.31
+ 
+Lead In: None.
+Default Next Question: S74991.00
+--------------------------------------------------------------------------------
+S74991.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     186       1 Public institution
+      43       2 Private not-for-profit institution
+      26       3 Private for-profit institution
+  -------
+     255
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      20
+TOTAL =========>     275   VALID SKIP(-4)    7284     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              3        Mean:                1.37
+ 
+Lead In: S74990.00[Default]
+Default Next Question: S74992.00
+--------------------------------------------------------------------------------
+S74992.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      10       1 Public institution
+       3       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+      13
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      16   VALID SKIP(-4)    7543     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              2        Mean:                1.23
+ 
+Lead In: S74991.00[Default]
+Default Next Question: S74993.00
+--------------------------------------------------------------------------------
+S74993.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       4       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>       7   VALID SKIP(-4)    7552     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              3        Mean:                 1.4
+ 
+Lead In: S74992.00[Default]
+Default Next Question: S74994.00
+--------------------------------------------------------------------------------
+S74994.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       1       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              2        Mean:                 1.5
+ 
+Lead In: S74993.00[Default]
+Default Next Question: S75231.01
+--------------------------------------------------------------------------------
+S78940.00    [YSCH-23450.01]                                Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      93       1 Associate/Junior College or two-year associate degree (AA)
+       5       2 Vocational or technical certificate
+     316       3 Bachelor's degree (BA, BS or unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       1       5 Doctoral Degree (PhD)
+       3       6 Professional Degree (MD, LLD, DDS, JD)
+      52       7 No degree received   (Go To S77458.00)
+       3       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+     474
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     474   VALID SKIP(-4)    7085     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              8        Mean:                3.09
+ 
+Lead In: S78921.00[1:1]
+Default Next Question: S78945.00
+--------------------------------------------------------------------------------
+S78941.00    [YSCH-23450.02]                                Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       3       1 Associate/Junior College or two-year associate degree (AA)
+       1       2 Vocational or technical certificate
+       8       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       8       7 No degree received   (Go To S77459.00)
+       2       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+      22
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      22   VALID SKIP(-4)    7537     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              8        Mean:                4.59
+ 
+Lead In: S78922.00[1:1]
+Default Next Question: S78946.00
+--------------------------------------------------------------------------------
+S78942.00    [YSCH-23450.03]                                Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To S77460.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
+ 
+Min:              3        Max:              7        Mean:                   5
+ 
+Lead In: S78923.00[1:1]
+Default Next Question: S78947.00
+--------------------------------------------------------------------------------
+S78943.00    [YSCH-23450.04]                                Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 04?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To S77461.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7558     NON-INTERVIEW(-5)    1425
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: S78924.00[1:1]
+Default Next Question: S78948.00
+--------------------------------------------------------------------------------
+S78944.00    [YSCH-23450.05]                                Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 05?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       2       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To S78968.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: S78925.00[1:1]
+Default Next Question: S78949.00
+--------------------------------------------------------------------------------
+S99990.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1445       1 Public institution
+     297       2 Private not-for-profit institution
+     208       3 Private for-profit institution
+  -------
+    1950
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      62
+TOTAL =========>    2012   VALID SKIP(-4)    5406     NON-INTERVIEW(-5)    1566
+ 
+Min:              1        Max:              3        Mean:                1.37
+ 
+Lead In: None.
+Default Next Question: S99991.00
+--------------------------------------------------------------------------------
+S99991.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     124       1 Public institution
+      31       2 Private not-for-profit institution
+      17       3 Private for-profit institution
+  -------
+     172
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       7
+TOTAL =========>     179   VALID SKIP(-4)    7239     NON-INTERVIEW(-5)    1566
+ 
+Min:              1        Max:              3        Mean:                1.38
+ 
+Lead In: S99990.00[Default]
+Default Next Question: S99992.00
+--------------------------------------------------------------------------------
+S99992.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       7       1 Public institution
+       1       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>      10   VALID SKIP(-4)    7408     NON-INTERVIEW(-5)    1566
+ 
+Min:              1        Max:              3        Mean:                1.33
+ 
+Lead In: S99991.00[Default]
+Default Next Question: S99993.00
+--------------------------------------------------------------------------------
+S99993.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       0       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       0
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>       1   VALID SKIP(-4)    7417     NON-INTERVIEW(-5)    1566
+ 
+Min:        Max:        Mean:                   0
+ 
+Lead In: S99992.00[Default]
+Default Next Question: S99994.00
+--------------------------------------------------------------------------------
+S99994.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7417     NON-INTERVIEW(-5)    1566
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: S99993.00[Default]
+Default Next Question: T00236.01
+--------------------------------------------------------------------------------
+T03075.00    [YSCH-23450.01]                                Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      74       1 Associate/Junior College or two-year associate degree (AA)
+       5       2 Vocational or technical certificate
+     234       3 Bachelor's degree (BA, BS or  unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       1       6 Professional Degree (MD, LLD, DDS, JD)
+      38       7 No degree received   (Go To T02022.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+     353
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     353   VALID SKIP(-4)    7065     NON-INTERVIEW(-5)    1566
+ 
+Min:              1        Max:              7        Mean:                3.01
+ 
+Lead In: T03057.00[1:1]
+Default Next Question: T03078.00
+--------------------------------------------------------------------------------
+T03076.00    [YSCH-23450.02]                                Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       2       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       5       7 No degree received   (Go To T02023.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       8
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       8   VALID SKIP(-4)    7410     NON-INTERVIEW(-5)    1566
+ 
+Min:              1        Max:              7        Mean:                5.25
+ 
+Lead In: T03058.00[1:1]
+Default Next Question: T03079.00
+--------------------------------------------------------------------------------
+T03077.00    [YSCH-23450.03]                                Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To T02024.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7417     NON-INTERVIEW(-5)    1566
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: T03059.00[1:1]
+Default Next Question: T03080.00
+--------------------------------------------------------------------------------
+T19990.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1252       1 Public institution
+     276       2 Private not-for-profit institution
+     247       3 Private for-profit institution
+  -------
+    1775
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      71
+TOTAL =========>    1846   VALID SKIP(-4)    5644     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              3        Mean:                1.43
+ 
+Lead In: None.
+Default Next Question: T19991.00
+--------------------------------------------------------------------------------
+T19991.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     140       1 Public institution
+      28       2 Private not-for-profit institution
+      20       3 Private for-profit institution
+  -------
+     188
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       6
+TOTAL =========>     194   VALID SKIP(-4)    7296     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              3        Mean:                1.36
+ 
+Lead In: T19990.00[Default]
+Default Next Question: T19992.00
+--------------------------------------------------------------------------------
+T19992.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       8       1 Public institution
+       2       2 Private not-for-profit institution
+       3       3 Private for-profit institution
+  -------
+      13
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      13   VALID SKIP(-4)    7477     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              3        Mean:                1.62
+ 
+Lead In: T19991.00[Default]
+Default Next Question: T19993.00
+--------------------------------------------------------------------------------
+T19993.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       2       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7488     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T19992.00[Default]
+Default Next Question: T19994.00
+--------------------------------------------------------------------------------
+T19994.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7489     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T19993.00[Default]
+Default Next Question: T19995.00
+--------------------------------------------------------------------------------
+T19995.00    [CV_COLLEGE_TYPE.06]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 06 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7489     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T19994.00[Default]
+Default Next Question: T19996.00
+--------------------------------------------------------------------------------
+T19996.00    [CV_COLLEGE_TYPE.07]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 07 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7489     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T19995.00[Default]
+Default Next Question: T19997.00
+--------------------------------------------------------------------------------
+T19997.00    [CV_COLLEGE_TYPE.08]                           Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 08 PRIVATE OR PUBLIC
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7489     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T19996.00[Default]
+Default Next Question: T20097.00
+--------------------------------------------------------------------------------
+T23238.00    [YSCH-23450.01]                                Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      48       1 Associate/Junior College or two-year associate degree (AA)
+       7       2 Vocational or technical certificate
+     127       3 Bachelor's degree (BA, BS or  unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       1       6 Professional Degree (MD, LLD, DDS, JD)
+      41       7 No degree received   (Go To T21727.00)
+       3       8 OTHER (SPECIFY)
+       0       9 GED
+       2     999 UNCODABLE
+  -------
+     230
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     230   VALID SKIP(-4)    7260     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:            999        Mean:               12.01
+ 
+Lead In: T23215.00[1:1]
+Default Next Question: T23241.00
+--------------------------------------------------------------------------------
+T23239.00    [YSCH-23450.02]                                Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       3       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       7       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       8       7 No degree received   (Go To T21728.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+      18
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      18   VALID SKIP(-4)    7472     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              7        Mean:                4.44
+ 
+Lead In: T23216.00[1:1]
+Default Next Question: T23242.00
+--------------------------------------------------------------------------------
+T23240.00    [YSCH-23450.03]                                Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To T21729.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7488     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:              3        Mean:                   2
+ 
+Lead In: T23217.00[1:1]
+Default Next Question: T23243.00
+--------------------------------------------------------------------------------
+T38503.00    [YSCH-23450.01]                                Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      52       1 Associate/Junior College or two-year associate degree (AA)
+       6       2 Vocational or technical certificate
+      84       3 Bachelor's degree (BA, BS or  unspecified)
+       2       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       1       6 Professional Degree (MD, LLD, DDS, JD)
+      27       7 No degree received   (Go To T37617.00)
+       1       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+     173
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     173   VALID SKIP(-4)    7386     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              8        Mean:                3.05
+ 
+Lead In: T38489.00[1:1]
+Default Next Question: T38506.00
+--------------------------------------------------------------------------------
+T38504.00    [YSCH-23450.02]                                Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       4       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       5       3 Bachelor's degree (BA, BS or  unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       4       7 No degree received   (Go To T37618.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+      14
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      14   VALID SKIP(-4)    7545     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              7        Mean:                3.64
+ 
+Lead In: T38490.00[1:1]
+Default Next Question: T38507.00
+--------------------------------------------------------------------------------
+T38505.00    [YSCH-23450.03]                                Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       1       7 No degree received   (Go To T38522.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7558     NON-INTERVIEW(-5)    1425
+ 
+Min:              7        Max:              7        Mean:                   7
+ 
+Lead In: T38491.00[1:1]
+Default Next Question: T38522.00
+--------------------------------------------------------------------------------
+T49390.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1165       1 Public institution
+     236       2 Private not-for-profit institution
+     280       3 Private for-profit institution
+  -------
+    1681
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      65
+TOTAL =========>    1746   VALID SKIP(-4)    5813     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              3        Mean:                1.47
+ 
+Lead In: T36000.00[Default]
+Default Next Question: T49391.00
+--------------------------------------------------------------------------------
+T49391.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     100       1 Public institution
+      30       2 Private not-for-profit institution
+      23       3 Private for-profit institution
+  -------
+     153
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       7
+TOTAL =========>     160   VALID SKIP(-4)    7399     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              3        Mean:                 1.5
+ 
+Lead In: T49390.00[Default]
+Default Next Question: T49392.00
+--------------------------------------------------------------------------------
+T49392.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       3       1 Public institution
+       0       2 Private not-for-profit institution
+       2       3 Private for-profit institution
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5   VALID SKIP(-4)    7554     NON-INTERVIEW(-5)    1425
+ 
+Min:              1        Max:              3        Mean:                 1.8
+ 
+Lead In: T49391.00[Default]
+Default Next Question: T36002.00
+--------------------------------------------------------------------------------
+T52001.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+    1085       1 Public institution
+     225       2 Private not-for-profit institution
+     307       3 Private for-profit institution
+  -------
+    1617
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      67
+TOTAL =========>    1684   VALID SKIP(-4)    5795     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              3        Mean:                1.52
+ 
+Lead In: T52000.00[Default]
+Default Next Question: T52002.00
+--------------------------------------------------------------------------------
+T52002.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     101       1 Public institution
+      24       2 Private not-for-profit institution
+      32       3 Private for-profit institution
+  -------
+     157
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       4
+TOTAL =========>     161   VALID SKIP(-4)    7318     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              3        Mean:                1.56
+ 
+Lead In: T52001.00[Default]
+Default Next Question: T52003.00
+--------------------------------------------------------------------------------
+T52003.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       5       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       6
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>       8   VALID SKIP(-4)    7471     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              3        Mean:                1.33
+ 
+Lead In: T52002.00[Default]
+Default Next Question: T52004.00
+--------------------------------------------------------------------------------
+T52004.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       3       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       3   VALID SKIP(-4)    7476     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T52003.00[Default]
+Default Next Question: T52005.00
+--------------------------------------------------------------------------------
+T52005.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7478     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: T52004.00[Default]
+Default Next Question: T52007.00
+--------------------------------------------------------------------------------
+T54749.00    [YSCH-23450.01]                                Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      55       1 Associate/Junior College or two-year associate degree (AA)
+      12       2 Vocational or technical certificate
+      59       3 Bachelor's degree (BA, BS or  unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      32       7 No degree received   (Go To T53665.00)
+       3       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+     162
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     162   VALID SKIP(-4)    7317     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              8        Mean:                3.14
+ 
+Lead In: T54728.00[1:1]
+Default Next Question: T54752.00
+--------------------------------------------------------------------------------
+T54750.00    [YSCH-23450.02]                                Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       2       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       2       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       5       7 No degree received   (Go To T53666.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9   VALID SKIP(-4)    7470     NON-INTERVIEW(-5)    1505
+ 
+Min:              1        Max:              7        Mean:                4.78
+ 
+Lead In: T54729.00[1:1]
+Default Next Question: T54753.00
+--------------------------------------------------------------------------------
+T54751.00    [YSCH-23450.03]                                Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       2       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To T53667.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       4
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       4   VALID SKIP(-4)    7475     NON-INTERVIEW(-5)    1505
+ 
+Min:              3        Max:              7        Mean:                   5
+ 
+Lead In: T54730.00[1:1]
+Default Next Question: T54754.00
+--------------------------------------------------------------------------------
+T66501.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     960       1 Public institution
+     213       2 Private not-for-profit institution
+     261       3 Private for-profit institution
+  -------
+    1434
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      52
+TOTAL =========>    1486   VALID SKIP(-4)    5937     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:              3        Mean:                1.51
+ 
+Lead In: T66500.00[Default]
+Default Next Question: T66502.00
+--------------------------------------------------------------------------------
+T66502.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      83       1 Public institution
+      15       2 Private not-for-profit institution
+      27       3 Private for-profit institution
+  -------
+     125
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       6
+TOTAL =========>     131   VALID SKIP(-4)    7292     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:              3        Mean:                1.55
+ 
+Lead In: T66501.00[Default]
+Default Next Question: T66503.00
+--------------------------------------------------------------------------------
+T66503.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       4       1 Public institution
+       2       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       6
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       6   VALID SKIP(-4)    7417     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:              2        Mean:                1.33
+ 
+Lead In: T66502.00[Default]
+Default Next Question: T66504.00
+--------------------------------------------------------------------------------
+T66504.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2   VALID SKIP(-4)    7421     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:              3        Mean:                   2
+ 
+Lead In: T66503.00[Default]
+Default Next Question: T66506.00
+--------------------------------------------------------------------------------
+T68874.00    [YSCH-23450.01]                                Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      46       1 Associate/Junior College or two-year associate degree (AA)
+       8       2 Vocational or technical certificate
+      45       3 Bachelor's degree (BA, BS or  unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       1       6 Professional Degree (MD, LLD, DDS, JD)
+      25       7 No degree received   (Go To T67985.00)
+       4       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+     130
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     130   VALID SKIP(-4)    7293     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:              8        Mean:                3.18
+ 
+Lead In: T68859.00[1:1]
+Default Next Question: T68876.00
+--------------------------------------------------------------------------------
+T68875.00    [YSCH-23450.02]                                Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       3       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       0       3 Bachelor's degree (BA, BS or  unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To T67986.00)
+       1       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODABLE
+  -------
+       6
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       6   VALID SKIP(-4)    7417     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:              8        Mean:                4.17
+ 
+Lead In: T68860.00[1:1]
+Default Next Question: T68877.00
+--------------------------------------------------------------------------------
+T81221.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     964       1 Public institution
+     236       2 Private not-for-profit institution
+     266       3 Private for-profit institution
+  -------
+    1466
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      62
+TOTAL =========>    1528   VALID SKIP(-4)    5612     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              3        Mean:                1.52
+ 
+Lead In: T81220.00[Default]
+Default Next Question: T81222.00
+--------------------------------------------------------------------------------
+T81222.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     114       1 Public institution
+      29       2 Private not-for-profit institution
+      42       3 Private for-profit institution
+  -------
+     185
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       7
+TOTAL =========>     192   VALID SKIP(-4)    6948     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              3        Mean:                1.61
+ 
+Lead In: T81221.00[Default]
+Default Next Question: T81223.00
+--------------------------------------------------------------------------------
+T81223.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      13       1 Public institution
+       2       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+      16
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      16   VALID SKIP(-4)    7124     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              3        Mean:                1.25
+ 
+Lead In: T81222.00[Default]
+Default Next Question: T81224.00
+--------------------------------------------------------------------------------
+T81224.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       2       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       3   VALID SKIP(-4)    7137     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              2        Mean:                1.67
+ 
+Lead In: T81223.00[Default]
+Default Next Question: T81226.00
+--------------------------------------------------------------------------------
+T83823.00    [YSCH-23450.01]                                Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      89       1 Associate/Junior College or two-year associate degree (AA)
+      13       2 Vocational or technical certificate
+      70       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      28       7 No degree received   (Go To T82787.00)
+       3       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 OTHER - RECODED TO No degree received
+       0     999 UNCODABLE
+  -------
+     203
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     203   VALID SKIP(-4)    6937     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              8        Mean:                2.68
+ 
+Lead In: T83819.00[1:1]
+Default Next Question: T83826.00
+--------------------------------------------------------------------------------
+T83824.00    [YSCH-23450.02]                                Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       4       1 Associate/Junior College or two-year associate degree (AA)
+       1       2 Vocational or technical certificate
+      11       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To T82788.00)
+       0       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 OTHER - RECODED TO No degree received
+       0     999 UNCODABLE
+  -------
+      18
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      18   VALID SKIP(-4)    7122     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              7        Mean:                2.94
+ 
+Lead In: T83820.00[1:1]
+Default Next Question: T83827.00
+--------------------------------------------------------------------------------
+T83825.00    [YSCH-23450.03]                                Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       1       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To T82789.00)
+       0       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 OTHER - RECODED TO No degree received
+       0     999 UNCODABLE
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       3   VALID SKIP(-4)    7137     NON-INTERVIEW(-5)    1844
+ 
+Min:              1        Max:              3        Mean:                   2
+ 
+Lead In: T83821.00[1:1]
+Default Next Question: T83828.00
+--------------------------------------------------------------------------------
+U00002.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     718       1 Public institution
+     205       2 Private not-for-profit institution
+     230       3 Private for-profit institution
+  -------
+    1153
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      38
+TOTAL =========>    1191   VALID SKIP(-4)    5912     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              3        Mean:                1.58
+ 
+Lead In: U00001.00[Default]
+Default Next Question: U00003.00
+--------------------------------------------------------------------------------
+U00003.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      84       1 Public institution
+      28       2 Private not-for-profit institution
+      27       3 Private for-profit institution
+  -------
+     139
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       8
+TOTAL =========>     147   VALID SKIP(-4)    6956     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              3        Mean:                1.59
+ 
+Lead In: U00002.00[Default]
+Default Next Question: U00004.00
+--------------------------------------------------------------------------------
+U00004.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      11       1 Public institution
+       8       2 Private not-for-profit institution
+       3       3 Private for-profit institution
+  -------
+      22
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>      23   VALID SKIP(-4)    7080     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              3        Mean:                1.64
+ 
+Lead In: U00003.00[Default]
+Default Next Question: U00005.00
+--------------------------------------------------------------------------------
+U00005.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    7102     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: U00004.00[Default]
+Default Next Question: U00007.00
+--------------------------------------------------------------------------------
+U02489.00    [YSCH-23450.01]                                Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      69       1 Associate/Junior College or two-year associate degree (AA)
+      11       2 Vocational or technical certificate
+      64       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       2       6 Professional Degree (MD, LLD, DDS, JD)
+      16       7 No degree received   (Go To U01775.00)
+       3       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+     165
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     165   VALID SKIP(-4)    6938     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              8        Mean:                2.61
+ 
+Lead In: U02486.00[1:1]
+Default Next Question: U02491.00
+--------------------------------------------------------------------------------
+U02490.00    [YSCH-23450.02]                                Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       3       1 Associate/Junior College or two-year associate degree (AA)
+       2       2 Vocational or technical certificate
+       8       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       5       7 No degree received   (Go To U01776.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+      18
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      18   VALID SKIP(-4)    7085     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              7        Mean:                3.67
+ 
+Lead In: U02487.00[1:1]
+Default Next Question: U02492.00
+--------------------------------------------------------------------------------
+U09569.00    [YINC-1700]                                    Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             TOTAL INCOME FROM WAGES AND SALARY IN PAST YEAR
+ 
+During 2014, how much income did you receive from wages, salary, commissions, or
+tips from all jobs, before deductions for taxes or for anything else?
+ 
+UNIVERSE: R received income from job
+ 
+ 
+NOTE: Truncated values are applied to the top 2 percent of respondents with 
+valid non-missing responses.  The lowest value for the top 2 percent of cases is
+used as the truncation level ($ 135,000 for this variable).  Values for all 
+cases at or over that level are averaged. That average is then assigned to each 
+of the top 2 percent of the cases.
+ 
+      23           0
+      52           1 TO 999
+      36        1000 TO 1999
+      39        2000 TO 2999
+      28        3000 TO 3999
+      23        4000 TO 4999
+      72        5000 TO 5999
+      37        6000 TO 6999
+      40        7000 TO 7999
+      46        8000 TO 8999
+      26        9000 TO 9999
+     267       10000 TO 14999
+     305       15000 TO 19999
+     397       20000 TO 24999
+    1952       25000 TO 49999
+    1644       50000 TO 99999999: 50000+
+  -------
+    4987
+ 
+Refusal(-1)           70   (Go To U09570.00)
+Don't Know(-2)       713   (Go To U09570.00)
+TOTAL =========>    5770   VALID SKIP(-4)    1333     NON-INTERVIEW(-5)    1881
+ 
+Min:              0        Max:         212641        Mean:            44181.51
+ 
+Lead In: U09567.00[Default] U09568.00[Default]
+Default Next Question: U09571.00
+--------------------------------------------------------------------------------
+U09570.00    [YINC-1800]                                    Survey Year: 2015
+  PRIMARY VARIABLE
+
+ 
+             ESTIMATED INCOME FROM WAGES AND SALARY IN PAST YEAR
+ 
+(REFER TO SHOWCARD FF)  [Please look at this card]  Can you tell me the letter 
+of the category that is your best estimate of the amount you received in 2014 in
+wages, salary, commissions and tips?
+ 
+UNIVERSE: R DK/RF to answer how much income received from all jobs
+ 
+      92       1 A. $1 - $5,000
+     104       2 B. $5,001 - $10,000
+     214       3 C. $10,001 - $25,000
+     203       4 D. $25,001 - $50,000
+      88       5 E. $50,001 - $100,000
+      14       6 F. $100,001 - $250,000
+       1       7 G. More than $250,000
+  -------
+     716
+ 
+Refusal(-1)           46
+Don't Know(-2)        21
+TOTAL =========>     783   VALID SKIP(-4)    6320     NON-INTERVIEW(-5)    1881
+ 
+Min:              1        Max:              7        Mean:                3.19
+ 
+Lead In: U09569.00[-2:-1]
+Default Next Question: U09571.00
+--------------------------------------------------------------------------------
+U18368.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     548       1 Public institution
+     187       2 Private not-for-profit institution
+     168       3 Private for-profit institution
+  -------
+     903
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      43
+TOTAL =========>     946   VALID SKIP(-4)    5788     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              3        Mean:                1.58
+ 
+Lead In: U18367.00[Default]
+Default Next Question: U18369.00
+--------------------------------------------------------------------------------
+U18369.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      57       1 Public institution
+      21       2 Private not-for-profit institution
+      16       3 Private for-profit institution
+  -------
+      94
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       7
+TOTAL =========>     101   VALID SKIP(-4)    6633     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              3        Mean:                1.56
+ 
+Lead In: U18368.00[Default]
+Default Next Question: U18370.00
+--------------------------------------------------------------------------------
+U18370.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       6       1 Public institution
+       1       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       7
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>       8   VALID SKIP(-4)    6726     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              2        Mean:                1.14
+ 
+Lead In: U18369.00[Default]
+Default Next Question: U18371.00
+--------------------------------------------------------------------------------
+U18371.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       2       1 Public institution
+       1       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       3   VALID SKIP(-4)    6731     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              2        Mean:                1.33
+ 
+Lead In: U18370.00[Default]
+Default Next Question: U18372.00
+--------------------------------------------------------------------------------
+U18372.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    6733     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: U18371.00[Default]
+Default Next Question: U18373.00
+--------------------------------------------------------------------------------
+U18373.00    [CV_COLLEGE_TYPE.06]                           Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 06 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       0       1 Public institution
+       0       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    6733     NON-INTERVIEW(-5)    2250
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: U18372.00[Default]
+Default Next Question: A00018.01
+--------------------------------------------------------------------------------
+U21662.00    [YSCH-23450.01]                                Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      54       1 Associate/Junior College or two-year associate degree (AA)
+      11       2 Vocational or technical certificate
+      52       3 Bachelor's degree (BA, BS or unspecified)
+       2       4 Master's degree (MA, MBA, MS, MSW)
+       1       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      19       7 No degree received   (Go To U20362.00)
+       1       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+     140
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     140   VALID SKIP(-4)    6594     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              8        Mean:                2.76
+ 
+Lead In: U21658.00[1:1]
+Default Next Question: U21666.00
+--------------------------------------------------------------------------------
+U21663.00    [YSCH-23450.02]                                Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       4       1 Associate/Junior College or two-year associate degree (AA)
+       1       2 Vocational or technical certificate
+       6       3 Bachelor's degree (BA, BS or unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       1       6 Professional Degree (MD, LLD, DDS, JD)
+       2       7 No degree received   (Go To U20363.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+      15
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      15   VALID SKIP(-4)    6719     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              7        Mean:                 3.2
+ 
+Lead In: U21659.00[1:1]
+Default Next Question: U21667.00
+--------------------------------------------------------------------------------
+U21664.00    [YSCH-23450.03]                                Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       4       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To U20364.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+       4
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       4   VALID SKIP(-4)    6730     NON-INTERVIEW(-5)    2250
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: U21660.00[1:1]
+Default Next Question: U21668.00
+--------------------------------------------------------------------------------
+U21665.00    [YSCH-23450.04]                                Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 04?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To U20365.00)
+       0       8 OTHER (SPECIFY)
+       0       9 GED
+       0     999 UNCODEABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    6733     NON-INTERVIEW(-5)    2250
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: U21661.00[1:1]
+Default Next Question: U21669.00
+--------------------------------------------------------------------------------
+U28572.00    [YINC-1700]                                    Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             TOTAL INCOME FROM WAGES AND SALARY IN PAST YEAR
+ 
+During 2016, how much income did you receive from wages, salary, commissions, or
+tips from all jobs, before deductions for taxes or for anything else?
+ 
+UNIVERSE: R received income from job
+ 
+ 
+NOTE: Truncated values are applied to the top 2 percent of respondents with 
+valid non-missing responses.  The lowest value for the top 2 percent of cases is
+used as the truncation level ($ 149,000 for this variable).  Values for all 
+cases at or over that level are averaged. That average is then assigned to each 
+of the top 2 percent of the cases.
+ 
+      31           0
+     159           1 TO 4999
+     174        5000 TO 9999
+     239       10000 TO 14999
+     256       15000 TO 19999
+     329       20000 TO 24999
+     397       25000 TO 29999
+     799       30000 TO 39999
+     724       40000 TO 49999
+     546       50000 TO 59999
+     396       60000 TO 69999
+     280       70000 TO 79999
+     191       80000 TO 89999
+     138       90000 TO 99999
+     311      100000 TO 149999
+     121      150000 TO 99999999: 150000+
+  -------
+    5091
+ 
+Refusal(-1)           68   (Go To U28573.00)
+Don't Know(-2)       362   (Go To U28573.00)
+Invalid Skip(-3)       2
+TOTAL =========>    5523   VALID SKIP(-4)    1211     NON-INTERVIEW(-5)    2250
+ 
+Min:              0        Max:         235884        Mean:            49477.02
+ 
+Lead In: U28570.00[Default] U28571.00[Default]
+Default Next Question: U28574.00
+--------------------------------------------------------------------------------
+U28573.00    [YINC-1800]                                    Survey Year: 2017
+  PRIMARY VARIABLE
+
+ 
+             ESTIMATED INCOME FROM WAGES AND SALARY IN PAST YEAR
+ 
+(REFER TO SHOWCARD FF)  [Please look at this card]  What is your best estimate 
+of the amount you received in 2016 in wages, salary, commissions and tips?  (IF 
+SHOWCARDS ARE NOT BEING USED, ADD: I will read the categories in order. Please 
+stop me when I reach the correct one.)
+ 
+UNIVERSE: R DK/RF to answer how much income received from all jobs
+ 
+      51       1 A. $1 - $5,000
+      50       2 B. $5,001 - $10,000
+     113       3 C. $10,001 - $25,000
+      97       4 D. $25,001 - $50,000
+      45       5 E. $50,001 - $100,000
+      10       6 F. $100,001 - $250,000
+       4       7 G. More than $250,000
+  -------
+     370
+ 
+Refusal(-1)           47
+Don't Know(-2)        14
+Invalid Skip(-3)       1
+TOTAL =========>     432   VALID SKIP(-4)    6302     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              7        Mean:                3.22
+ 
+Lead In: U28572.00[-2:-1]
+Default Next Question: U28574.00
+--------------------------------------------------------------------------------
+U34363.00    [CV_COLLEGE_TYPE.01]                           Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 01 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+     451       1 Public institution
+     152       2 Private not-for-profit institution
+     130       3 Private for-profit institution
+  -------
+     733
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      32
+TOTAL =========>     765   VALID SKIP(-4)    6182     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              3        Mean:                1.56
+ 
+Lead In: U34362.00[Default]
+Default Next Question: U34364.00
+--------------------------------------------------------------------------------
+U34364.00    [CV_COLLEGE_TYPE.02]                           Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 02 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      48       1 Public institution
+      19       2 Private not-for-profit institution
+      15       3 Private for-profit institution
+  -------
+      82
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      85   VALID SKIP(-4)    6862     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              3        Mean:                 1.6
+ 
+Lead In: U34363.00[Default]
+Default Next Question: U34365.00
+--------------------------------------------------------------------------------
+U34365.00    [CV_COLLEGE_TYPE.03]                           Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 03 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+      10       1 Public institution
+       2       2 Private not-for-profit institution
+       1       3 Private for-profit institution
+  -------
+      13
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      13   VALID SKIP(-4)    6934     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              3        Mean:                1.31
+ 
+Lead In: U34364.00[Default]
+Default Next Question: U34366.00
+--------------------------------------------------------------------------------
+U34366.00    [CV_COLLEGE_TYPE.04]                           Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 04 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       3       1 Public institution
+       0       2 Private not-for-profit institution
+       2       3 Private for-profit institution
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5   VALID SKIP(-4)    6942     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              3        Mean:                 1.8
+ 
+Lead In: U34365.00[Default]
+Default Next Question: U34367.00
+--------------------------------------------------------------------------------
+U34367.00    [CV_COLLEGE_TYPE.05]                           Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             COLLEGE 05 PUBLIC OR PRIVATE
+ 
+This variable indicates whether the college is public, private not-for-profit, 
+or private for-profit; the information is from the IPEDS database (Nation Center
+for Education Statistics).
+ 
+       1       1 Public institution
+       0       2 Private not-for-profit institution
+       0       3 Private for-profit institution
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    6946     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: U34366.00[Default]
+Default Next Question: A00019.00
+--------------------------------------------------------------------------------
+U35726.00    [YSCH-3112]                                    Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             WHAT IS CURRENT HIGHEST GRADE EVER COMPLETED?
+ 
+What is the highest grade you have ever completed as of today?
+ 
+UNIVERSE: R enrolled since DLI
+ 
+       1       0 NONE
+       0       1 1ST GRADE
+       2       2 2ND GRADE
+       2       3 3RD GRADE
+       0       4 4TH GRADE
+       1       5 5TH GRADE
+       2       6 6TH GRADE
+       1       7 7TH GRADE
+       2       8 8TH GRADE
+       5       9 9TH GRADE
+       4      10 10TH GRADE
+      13      11 11TH GRADE
+      68      12 12TH GRADE
+      46      13 1ST YEAR COLLEGE
+     142      14 2ND YEAR COLLEGE
+      96      15 3RD YEAR COLLEGE
+     162      16 4TH YEAR COLLEGE
+      54      17 5TH YEAR COLLEGE
+      72      18 6TH YEAR COLLEGE
+      42      19 7TH YEAR COLLEGE
+      87      20 8TH YEAR COLLEGE OR MORE
+       0      93 PRE-KINDERGARTEN
+       0      94 KINDERGARTEN
+       0      95 UNGRADED
+  -------
+     802
+ 
+Refusal(-1)            3
+Don't Know(-2)         3
+TOTAL =========>     808   VALID SKIP(-4)    6139     NON-INTERVIEW(-5)    2037
+ 
+Min:              0        Max:             20        Mean:               15.54
+ 
+Lead In: U35725.00[Default]  U35724.00[1:1]
+Default Next Question: U35727.00
+--------------------------------------------------------------------------------
+U36582.00    [YSCH-23450.01]                                Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 01?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+      44       1 Associate/Junior College or two-year associate degree (AA)
+       9       2 Vocational or technical certificate
+      48       3 Bachelor's degree (BA, BS or unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+      16       7 No degree received   (Go To U36073.00)
+       0       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 Other- Recoded to No degree received
+       0     999 UNCODABLE
+  -------
+     118
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     118   VALID SKIP(-4)    6829     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              7        Mean:                2.73
+ 
+Lead In: U36578.00[1:1]
+Default Next Question: U36586.00
+--------------------------------------------------------------------------------
+U36583.00    [YSCH-23450.02]                                Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 02?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       7       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       7       3 Bachelor's degree (BA, BS or unspecified)
+       1       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To U36074.00)
+       0       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 Other- Recoded to No degree received
+       0     999 UNCODABLE
+  -------
+      15
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      15   VALID SKIP(-4)    6932     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              4        Mean:                2.13
+ 
+Lead In: U36579.00[1:1]
+Default Next Question: U36587.00
+--------------------------------------------------------------------------------
+U36584.00    [YSCH-23450.03]                                Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 03?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       1       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       2       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To U36075.00)
+       0       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 Other- Recoded to No degree received
+       0     999 UNCODABLE
+  -------
+       3
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       3   VALID SKIP(-4)    6944     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              3        Mean:                2.33
+ 
+Lead In: U36580.00[1:1]
+Default Next Question: U36588.00
+--------------------------------------------------------------------------------
+U36585.00    [YSCH-23450.04]                                Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             WHAT DIPLOMA, DEGREE HAS R RECEIVED FROM COLLEGE 04?
+ 
+What diploma, degree, or certificate have you received from [school 
+name]([college loop])?
+ 
+UNIVERSE: R has attended college since DLI; # of credits computer calculates 
+they need to graduate is zero
+ 
+       0       1 Associate/Junior College or two-year associate degree (AA)
+       0       2 Vocational or technical certificate
+       1       3 Bachelor's degree (BA, BS or unspecified)
+       0       4 Master's degree (MA, MBA, MS, MSW)
+       0       5 Doctoral Degree (PhD)
+       0       6 Professional Degree (MD, LLD, DDS, JD)
+       0       7 No degree received   (Go To U36076.00)
+       0       8 OTHER (SPECIFY)
+       0       9 Added in - GED
+       0      10 Other- Recoded to No degree received
+       0     999 UNCODABLE
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1   VALID SKIP(-4)    6946     NON-INTERVIEW(-5)    2037
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: U36581.00[1:1]
+Default Next Question: U36589.00
+--------------------------------------------------------------------------------
+U42823.00    [YINC-1700]                                    Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             TOTAL INCOME FROM WAGES AND SALARY IN PAST YEAR
+ 
+During 2018, how much income did you receive from wages, salary, commissions, or
+tips from all jobs, before deductions for taxes or for anything else?
+ 
+UNIVERSE: R received income from job
+ 
+ 
+NOTE: Truncated values are applied to the top 2 percent of respondents with 
+valid non-missing responses.  The lowest value for the top 2 percent of cases is
+used as the truncation level ($ 178,000 for this variable).  Values for all 
+cases at or over that level are averaged. That average is then assigned to each 
+of the top 2 percent of the cases.
+ 
+      36           0
+     146           1 TO 4999
+     159        5000 TO 9999
+     198       10000 TO 14999
+     232       15000 TO 19999
+     298       20000 TO 24999
+     355       25000 TO 29999
+     768       30000 TO 39999
+     684       40000 TO 49999
+     620       50000 TO 59999
+     490       60000 TO 69999
+     350       70000 TO 79999
+     276       80000 TO 89999
+     163       90000 TO 99999
+     428      100000 TO 149999
+     209      150000 TO 99999999: 150000+
+  -------
+    5412
+ 
+Refusal(-1)           66   (Go To U42824.00)
+Don't Know(-2)       269   (Go To U42824.00)
+TOTAL =========>    5747   VALID SKIP(-4)    1200     NON-INTERVIEW(-5)    2037
+ 
+Min:              0        Max:         328451        Mean:            57217.16
+ 
+Lead In: U42821.00[Default] U42822.00[Default]
+Default Next Question: U42825.00
+--------------------------------------------------------------------------------
+U42824.00    [YINC-1800]                                    Survey Year: 2019
+  PRIMARY VARIABLE
+
+ 
+             ESTIMATED INCOME FROM WAGES AND SALARY IN PAST YEAR
+ 
+(REFER TO SHOWCARD FF)  [Please look at this card]  What is your best estimate 
+of the amount you received in 2018 in wages, salary, commissions and tips?  (IF 
+SHOWCARDS ARE NOT BEING USED, ADD: I will read the categories in order. Please 
+stop me when I reach the correct one.)
+ 
+UNIVERSE: R DK/RF to answer how much income received from all jobs
+ 
+      49       1 A. $1 - $5,000
+      48       2 B. $5,001 - $10,000
+      78       3 C. $10,001 - $25,000
+      56       4 D. $25,001 - $50,000
+      41       5 E. $50,001 - $100,000
+       3       6 F. $100,001 - $250,000
+       2       7 G. More than $250,000
+  -------
+     277
+ 
+Refusal(-1)           45
+Don't Know(-2)        13
+TOTAL =========>     335   VALID SKIP(-4)    6612     NON-INTERVIEW(-5)    2037
+ 
+Min:              1        Max:              7        Mean:                3.03
+ 
+Lead In: U42823.00[-2:-1]
+Default Next Question: U42825.00
+--------------------------------------------------------------------------------
+Z90337.00    [CVC_SAT_MATH_SCORE_2007]                      Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST SAT MATH SCORE 2007
+ 
+CUMULATIVE VARIABLE: Highest SAT MATH score. This variable is created for all 
+respondents regardless of interview status in the latest round the variable was 
+created (round 11); CVC_SAT_MATH_RND_2007 provides the latest round from which 
+the respondent's highest score is determined.that information was used to create
+this variable.
+ 
+      97       1 200 - 300
+     229       2 301 - 400
+     666       3 401 - 500
+     806       4 501 - 600
+     464       5 601 - 700
+     204       6 701 - 800
+       0       0 Have not yet received the scores
+  -------
+    2466
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     954
+TOTAL =========>    3420   VALID SKIP(-4)    5564     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              6        Mean:                3.78
+ 
+Lead In: Z90323.00[Default]
+Default Next Question: Z90338.00
+--------------------------------------------------------------------------------
+Z90339.00    [CVC_SAT_VERBAL_SCORE_2007]                    Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST SAT VERBAL SCORE 2007
+ 
+CUMULATIVE VARIABLE: Highest SAT VERBAL score. This variable is created for all 
+respondents regardless of interview status in the latest round the variable was 
+created (round 11); CVC_SAT_VERBAL_RND_2007 provides the latest round from which
+the respondent's highest score is determined.that information was used to create
+this variable.
+ 
+      69       1 200 - 300
+     226       2 301 - 400
+     660       3 401 - 500
+     832       4 501 - 600
+     483       5 601 - 700
+     158       6 701 - 800
+       0       0 Have not yet received the scores
+  -------
+    2428
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     992
+TOTAL =========>    3420   VALID SKIP(-4)    5564     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              6        Mean:                3.79
+ 
+Lead In: Z90338.00[Default]
+Default Next Question: Z90340.00
+--------------------------------------------------------------------------------
+Z90341.00    [CVC_ACT_SCORE_2007]                           Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST ACT SCORE 2007
+ 
+CUMULATIVE VARIABLE: Highest ACT score. This variable is created for all 
+respondents regardless of interview status in the latest round the variable was 
+created (round 11); CVC_ACT_SCORE_2007 provides the latest round that 
+information was used to create this variable.
+ 
+       4       1 0 - 6
+      23       2 7 - 12
+     458       3 13 - 18
+     944       4 19 - 24
+     474       5 25 - 30
+     102       6 31 - 36
+       0       0 Have not yet received the scores
+  -------
+    2005
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     420
+TOTAL =========>    2425   VALID SKIP(-4)    6559     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              6        Mean:                4.08
+ 
+Lead In: Z90340.00[Default]
+Default Next Question: Z90342.00
+--------------------------------------------------------------------------------
+Z90838.00    [CVC_HGC_EVER]                                 Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RS HIGHEST GRADE COMPLETED
+ 
+CUMULATIVE VARIABLE: The highest grade completed. This variable is created for 
+all respondents regardless of interview status in the current round; CVC_RND 
+provides the actual round of the respondent's most recent interview.
+ 
+       1       0 None
+       0       1 1st grade
+       1       2 2nd grade
+       0       3 3rd grade
+       0       4 4th grade
+       5       5 5th grade
+      29       6 6th grade
+      56       7 7th grade
+     293       8 8th grade
+     442       9 9th grade
+     502      10 10th grade
+     544      11 11th grade
+    1874      12 12th grade
+     698      13 1st year college
+     986      14 2nd year college
+     515      15 3rd year college
+    1314      16 4th year college
+     470      17 5th year college
+     490      18 6th year college
+     259      19 7th year college
+     387      20 8th year college or more
+      18      95 Ungraded
+  -------
+    8884
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     100
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             95        Mean:               13.87
+ 
+Lead In: Z90837.00[Default]
+Default Next Question: Z90839.00
+--------------------------------------------------------------------------------
+Z90839.00    [CVC_HIGHEST_DEGREE_EVER]                      Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST DEGREE RECEIVED
+ 
+CUMULATIVE VARIABLE: The highest degree received. This variable is created for 
+all respondents regardless of interview status in the current round; CVC_RND 
+provides the actual round of the respondent's most recent interview.
+ 
+     911       0 None
+    1157       1 GED
+    3598       2 High school diploma (Regular 12 year program)
+     757       3 Associate/Junior college (AA)
+    1691       4 Bachelor's degree (BA, BS)
+     652       5 Master's degree (MA, MS)
+      60       6 PhD
+     127       7 Professional degree (DDS, JD, MD)
+  -------
+    8953
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      31
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              7        Mean:                2.45
+ 
+Lead In: Z90838.00[Default]
+Default Next Question: Z90840.00
