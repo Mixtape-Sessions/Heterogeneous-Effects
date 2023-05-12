@@ -8,6 +8,21 @@ The holy grail of causal inference is the individual-level treatment effect: how
 
 ## Schedule
 
+1. Review of Machine Learning and Causal Infernece Course
+  - Potential outcomes and treatment effects
+  - Basic causal inference summary
+  - Prediction Target
+  - Prediction Methods
+  - Prediction mechanics
+  - Decision Trees
+  - Forest for the Trees
+2. Combining causal effects and ML: predicting heterogeneous treatment effects
+  - Traditional heterogeneity analysis: Interacted regression
+  - Challenges with traditional heterogeneity analysis
+  - Predicting outcomes vs. treatment effects
+  - Adapting ML to predict treatment effects
+
+
 
 ## Readings
 
