@@ -1,26 +1,32 @@
 <img src="img/banner.png" alt="Mixtape Sessions Banner" width="100%"> 
 <br/>
 
-<img src="img/readme_about.png" alt="About" width="100%">
-<br/>
+## About
 
 The holy grail of causal inference is the individual-level treatment effect: how would a particular patient respond to a drug? Which users  will respond most to a targeted ad? Would a given student be helped or harmed by a classroom intervention? This session introduces machine learning tools for estimating heterogeneous treatment effects like random causal forests. The course goes over the theory and concepts as well as the nitty-gritty of coding the methods up in python, R, and Stata using real-world examples. This course can be taken as a follow-up to the Machine Learning and Causal Inference mixtape session, or as a stand-alone course.
 
-<br/>
+
+## Schedule
 
 
-<img src="img/readme_schedule.png" alt="Schedule" width="100%"> 
-<br/>
+## Readings
 
-<details><summary><b>Machine Learning and Heterogeneous Effects</b></summary><br/>
+The following is a set of readings for analyzing heterogeneous effects with machine learning methods:
 
-<b>About</b>
+[Athey and Imbens (2016)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Imbens_2016.pdf)
 
-<b>Slides</b>
+[Athey, Tibshirani, and Wager (2019)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Tibshirani_Wager_2019.pdf)
 
-<!-- [Introduction.pdf](Slides/01-introduction.pdf) -->
+[Athey and Wager (2019)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Wager_2019.pdf)
 
-<b>Coding Exercise</b>
+[Wager and Athey (2018)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Wager_Athey_2018.pdf)
 
-</details><br />
 
+## Slides
+
+[Heterogeneous Effects](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Slides/ML_Heterogeneous_Effects.pdf)
+
+## Coding Labs
+
+1. [RCT to Regression](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/blob/main/Labs/python/ML_Heterogeneous_Effects.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mixtape-Sessions/Heterogeneous-Effects/blob/main/Labs/python/ML_Heterogeneous_Effects.ipynb)
