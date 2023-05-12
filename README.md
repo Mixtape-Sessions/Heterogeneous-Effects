@@ -28,13 +28,13 @@ The holy grail of causal inference is the individual-level treatment effect: how
 
 The following is a set of readings for analyzing heterogeneous effects with machine learning methods:
 
-[Athey and Imbens (2016)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Imbens_2016.pdf)
+[Athey and Imbens (2016)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Imbens_2016.pdf): Introduction to using trees to estimate heterogeneous treatment effects. 
 
-[Athey, Tibshirani, and Wager (2019)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Tibshirani_Wager_2019.pdf)
+[Athey, Tibshirani, and Wager (2019)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Tibshirani_Wager_2019.pdf): Warning! Very technical material. But contains the theory for using machine learning to estimate heterogeneous effects in a wide class of settings
 
-[Athey and Wager (2019)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Wager_2019.pdf)
+[Athey and Wager (2019)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Athey_Wager_2019.pdf): A more accessible application of the methods we will be using
 
-[Wager and Athey (2018)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Wager_Athey_2018.pdf)
+[Wager and Athey (2018)](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Readings/Wager_Athey_2018.pdf): Technical/theoretical background for random causal forests
 
 
 ## Slides
