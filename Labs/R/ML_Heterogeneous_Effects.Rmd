@@ -1,0 +1,485 @@
+---
+title: ML and Heterogeneous Effects
+output: github_document
+---
+
+# Causal Effects via Regression
+
+Let's take up the example from the slides: what is the effect of going to a fancy college on later-life earnings? We'll use data on about 1,000 American men in the NLSY born 1980-1984 who finished college, and look at the effect of going to a private college ($D_i$) on earnings ($Y_i$) in 2015-2019 (when they were about 30-39 years old). We will be estimating an equation like this:
+
+$$
+Y_i = \delta D_i + X_i'\beta+\varepsilon_i,
+$$
+
+where $X_i$ is a vector of controls, conditional on which we are willing to assume $D_i$ is as good as randomly assigned.
+
+What kinds of variables should we include in $X_i$?
+
+```{r packages}
+library(tidyverse)
+library(fixest)
+library(grf)
+library(randomForest)
+library(patchwork)
+```
+
+```{r load-nlsy}
+nlsy <- read_csv("https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Labs/data/nlsy97.csv")
+
+# clean data (drop obs with missing values)
+nlsy <- na.omit(nlsy)
+```
+
+Let's start with a simple (uncontrolled) regression.
+
+```{r reg-nlsy}
+# Simple regression
+feols(
+  annualearnings ~ 1 + i(privatecollege, ref = 0),
+  data = nlsy,
+  vcov = "HC1"
+)
+```
+
+How to interpret the coefficient on $privatecollege$? As a causal effect?
+
+Now let's add controls for parent's education and cognitive ability as measured by ASVAB:
+
+```{r reg-nlsy-w-controls}
+# Regression with controls
+feols(
+  annualearnings ~ 1 + i(privatecollege, ref = 0) + i(dadcollege) + i(momcollege) + asvab,
+  data = nlsy,
+  vcov = "HC1"
+)
+```
+
+How did the inclusion of controls change the estimate? Why?
+
+Back to the whiteboard for prediction!
+
+# Prediction Primer
+
+Let's use decision trees to predict which participants of the National JTPA Study were likely to find a job. We will use prior earnings, education, sex, race, and marital status as our prediction features.
+
+```{r load-jpta-data}
+# National JPTA Study
+jtpahet <- read_csv("https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Labs/data/jtpahet.csv")
+
+jtpahet$foundjob <- factor(
+  jtpahet$foundjob, levels = c(0, 1),
+  labels = c("Did not find a job", "Did find a job")
+)
+```
+
+We'll first grow a tree using just two features (education and prior earnings) so we can visualize it easily. Let's visualize the feature space: triangles are individuals who found a job, circles are those who didn't.
+
+```{r plot-educ-priorearn}
+# Raw data
+ggplot() +
+  geom_point(
+    aes(
+      x = educ, y = priorearn, 
+      shape = foundjob, color = foundjob
+    ),
+    data = jtpahet,
+    size = 2
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+```{r plot-2d-seperator-single-tree}
+# Decision tree with `ntree = 1`
+rf = randomForest::randomForest(
+    foundjob ~ educ + priorearn,
+    data = jtpahet, 
+    ntree = 1
+  )
+
+# Plot 2d Separator
+# https://stackoverflow.com/questions/74879060/how-to-make-decision-boundary-plots-from-randomforest-in-r
+grid <- expand.grid(
+  educ = 7:18,
+  priorearn = seq(0, 60000, length.out = 10000)
+)
+
+# `predict.all = TRUE` predicts each tree seperately
+predictions = predict(rf, grid, predict.all = TRUE)
+
+# First tree
+grid$foundjob_hat <- predictions$individual[, 1]
+
+# 2d separator plot
+ggplot(grid) + 
+  geom_raster(
+    aes(x = educ, y = priorearn, fill = foundjob_hat),
+    alpha = 0.5
+  ) +
+  geom_point(
+    aes(
+      x = educ, y = priorearn, 
+      shape = foundjob, color = foundjob
+    ),
+    data = jtpahet,
+    size = 2
+  ) +
+  theme_minimal(base_size = 16)
+
+```
+
+Now let's do a random forest:
+
+```{r random-forest}
+# Decision tree with `ntree = 1`
+rf = randomForest::randomForest(
+    foundjob ~ educ + priorearn,
+    data = jtpahet, 
+    ntree = 5
+  )
+
+# Plot
+
+forest_plot <- NULL
+
+# Each Tree
+for (i in 1:5) {
+  grid$foundjob_hat <- predictions$individual[, 1]
+
+  # 2d separator plot
+  sep_plot <- ggplot(grid) + 
+    geom_raster(
+      aes(x = educ, y = priorearn, fill = foundjob_hat),
+      alpha = 0.5,
+      show.legend = FALSE
+    ) +
+    geom_point(
+      aes(
+        x = educ, y = priorearn, 
+        shape = foundjob, color = foundjob
+      ),
+      data = jtpahet,
+      size = 2,
+      show.legend = FALSE
+    ) +
+    labs(title = "Random Forest", x = NULL, y = NULL) +
+    theme_minimal(base_size = 16)
+
+  if(is.null(forest_plot)) {
+    forest_plot <- sep_plot
+  } else {
+    forest_plot = forest_plot + sep_plot
+  }
+}
+
+# Overall Forest 
+grid$foundjob_hat <- predictions$aggregate
+
+# 2d separator plot
+sep_plot <- ggplot(grid) + 
+  geom_raster(
+    aes(x = educ, y = priorearn, fill = foundjob_hat),
+    alpha = 0.5,
+    show.legend = FALSE
+  ) +
+  geom_point(
+    aes(
+      x = educ, y = priorearn, 
+      shape = foundjob, color = foundjob
+    ),
+    data = jtpahet,
+    size = 2,
+    show.legend = FALSE
+  ) +
+  labs(title = "Random Forest", x = NULL, y = NULL) +
+  theme_minimal(base_size = 16)
+
+forest_plot = forest_plot + sep_plot
+
+forest_plot + plot_layout(nrow = 3, ncol = 2)
+```
+
+We only used two prediction features (prior earnings and education) for visualization. To get the best predictions, we should use all of our features. And to evaluate the quality of the prediction, we should hold out a test set.
+
+```{r random-forest-test-set}
+
+```
+
+Try on your own: grow a forest with 500 trees using the training set, and evaluate the prediction accuracy on the test set. Hint: you can evaluate the prediction accuracy by doing `forest.score(X_test,y_test)`.
+
+## Cheat
+
+```{r cheat-random-forest-test-set}
+
+# Hold out 25% of the data for testing
+train_idx = runif(nrow(jtpahet)) <= 0.5
+
+# Could pass `ytest` and `xtest` arguments
+forest = randomForest::randomForest(
+  foundjob ~ educ + priorearn + age + female + nonwhite + married,
+  data = jtpahet[train_idx == TRUE, ],
+  ntree = 500
+)
+
+predictions = predict(forest, newdata = jtpahet[train_idx == FALSE, ])
+actual = jtpahet[train_idx == FALSE, ]$foundjob
+
+table(actual, predictions)
+```
+
+So much for predicting _outcomes_. We want to predict causal effects. Back to the whiteboard!
+
+# Using Machine Learning to Predict Heterogeneous Treatment Effects
+
+## Key Challenge: Algorithms tailored for predicting outcomes can do poorly when predicting treatment effects
+
+### Factors that strongly predict outcomes may not strongly predict treatment effects
+
+$Y_i$: spending on a Lexus
+
+$D_i$: seeing an online ad for a Lexus
+
+$\ln Y_i=\beta_0+\beta_1 age_i +\beta_2 male_i + \beta_3 D_i+\beta_4 D_i \times male_i +\varepsilon_i$
+
+How do outcomes vary by age? (A lot if $\beta_1$ is big)
+
+How do treatment effects vary by age? (not at all!)
+
+What do treatment effects vary by? (gender!)
+
+Let's simulate some data to show what happens when we try to use algorithm tailored to predicting outcomes for predicting treatment effects.
+
+```{r gen-fake-data}
+# define parameters
+n = 1000        # sample size
+p = 0.5         # probability of seeing the ad
+beta0 = 0    
+beta1 = 0.2     # effect of age
+beta2 = -0.025  # difference in average spending between males and females who don't see the ad ()
+beta3 = 0       # effect of treatment among females
+beta4 = 0.05    # differential effect of treatment among males compared to females
+sigeps = 0.02   # residual variance of outcome
+
+# generate some fake data
+age = sample(18:60, n, replace = TRUE)
+male = sample(0:1, n, replace = TRUE)
+d = (runif(n) < p)
+epsilon = rnorm(n, 0, sigeps)
+lny = beta0 + beta1 * age + beta2 * male + beta3 * d + beta4 * d * male + epsilon
+
+# assemble as dataframe
+fakedata = data.frame(
+  lny = lny,
+  d = d,
+  age = age,
+  male = male
+)
+x0 = fakedata[fakedata$d == 0, c("age", "male")]
+x1 = fakedata[fakedata$d == 1, c("age", "male")]
+y0 = fakedata[fakedata$d == 0, "lny"]
+y1 = fakedata[fakedata$d == 0, "lny"]
+```
+
+Try on your own: fit two trees (call them `tree0` and `tree1`), each with `max_depth=2` to predict the outcome separately in the untreated ($D_i=0$) and treated ($D_i=1$) samples, using `x0` and `x1`, respectively.
+
+```{r, est-trees}
+# Not sure how to do in R yet!
+```
+
+```{r, display-trees}
+# Not sure how to do in R yet!
+```
+
+### Cheat
+
+```{r, cheat-est-trees}
+# Not sure how to do in R yet!
+```
+
+```{r, cheat-display-trees}
+# Not sure how to do in R yet!
+```
+
+Which variable(s) did the trees key in on? Why? Would these trees be useful for predicting treatment effects? Why or why not?
+
+How do we fix the problem?
+
+## Random Causal Forest: Simulated Example
+
+```{r fakedata-causal-forest}
+
+# Causal Forest
+tau_forest <- causal_forest(
+  X = as.matrix(fakedata[, c("age", "male")]), 
+  Y = fakedata$lny, 
+  W = fakedata$d
+)
+
+# Predict TEs
+fakedata$tau_hat = predict(tau_forest)$predictions
+```
+
+Let's see how well it did at estimating effects among men and women:
+
+```{r summarize-effects-male-v-female}
+fakedata |> 
+  group_by(male) |>
+  summarize(
+    tau_hat = mean(tau_hat)
+  )
+```
+
+How did our causal forest do at getting effects right for men and women? Let's see how it does on the age profile:
+
+```{r age-profiles}
+tau_hat_summ = fakedata |> 
+  group_by(male, age) |>
+  summarize(
+    tau_hat = mean(tau_hat)
+  ) |>
+  mutate(
+    male_label = ifelse(male == 0, "Female", "Male")
+  )
+
+ggplot(tau_hat_summ) + 
+  geom_point(
+    aes(x = age, y = tau_hat, color = male_label)
+  ) + 
+  labs(x = "Age", y = "Estimated Treatment Effect", color = NULL) +
+  theme_minimal(base_size = 16)
+```
+
+A little noisy on the age profile (which should be flat) but does get the difference between men and women!
+
+## Random Causal Forest: Predict the effects of job training
+
+We are ready to apply machine learning to predict causal effects in a real-life setting: how do the effects of job training vary by an individual's characteristics? We will use data from the National Job Training Partnership study, a large-scale randomized evaluation of a publicly subsidized job training program for disadvantaged youth and young adults. Why would we care how the effects of a subsidized job training program vary by a person's characteristics?
+
+We will use the JTPA evaluation dataset, which contains observations on about 14,000 individuals, some of whom were randomized to participate in job training ($z_i = 1$) and others who were not ($z_i = 0$).
+
+To do on your own:
+
+- load the dataset from the url `https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Labs/data/jtpahet.csv`
+- define the outcome vector (call it `y`) to be the column labeled `foundjob`
+- define the randomized assignment indicator (call it `z`) to be the column labeled `z`
+- define the feature vector (call it `x`) to be all columns except `foundjob`, `z`, and `enroll`.
+
+```{r load-jtpa}
+# load the data
+
+# define the variables
+```
+
+### Cheat
+
+```{r cheat-load-jtpa-2}
+# National JPTA Study
+jtpahet <- read_csv("https://github.com/Mixtape-Sessions/Heterogeneous-Effects/raw/main/Labs/data/jtpahet.csv")
+jtpahet$foundjob = as.numeric(jtpahet$foundjob)
+jtpahet$z = as.numeric(jtpahet$z)
+
+X <- as.matrix(
+  jtpahet[, c("age", "priorearn", "educ", "female", "nonwhite", "married")]
+)
+y <- jtpahet$foundjob
+z <- jtpahet$z
+```
+
+### Regression to get average effect
+
+On your own: run a linear regression of the outcome on the random assignment indicator, `z`. Since this was a randomized experiment, we don't need controls!
+
+```{r}
+
+```
+
+### Cheat:
+
+```{r avg-effect-jtpa}
+(est = feols(foundjob ~ i(z, ref = 0), data = jtpahet, vcov = "HC1"))
+ate = coef(est)["z::1"]
+```
+
+### Set up random forest
+
+So far, so good? Now create a random causal forest object, and fit it with outcome `y`, treatment variable `z`, and feature matrix `x`.
+
+```{r}
+# On your own: create and fit random causal forest object
+```
+
+### Cheat
+
+```{r}
+tau_forest <- causal_forest(
+  X = X, 
+  Y = y, 
+  W = z
+)
+```
+
+### Explore effects
+
+Let's see what kind of heterogeneous effects our random causal forest predicted
+
+```{r}
+tau_hat_oob <- predict(tau_forest)
+hist(tau_hat_oob$predictions, main = "Estimated Treatment effects")
+abline(v = ate, col = "red", lwd = 2)
+
+
+```
+
+Let's visualize how these effects vary by prior earnings and education by making a heatmap
+
+```{r prepare-priorearn-educ-grid}
+jtpahet$tau_hat_oob <- tau_hat_oob$predictions
+
+grid = expand.grid(
+  educ = 7:18,
+  priorearn = seq(0, 60000, by = 5000)
+)
+grid = as_tibble(grid)
+```
+
+We'll first visualize the effects among married, nonwhite females of average age:
+
+```{r predict-grid}
+# Effects for married, nonwhite females of average age:
+grid$age = mean(jtpahet$age)
+grid$female = 1
+grid$nonwhite = 1
+grid$married = 1
+```
+
+To do on your own: calculate the predicted effects for each "observation" in the grid:
+
+```{r}
+# grid$te_est = # uncomment and fill in on your own!
+```
+
+### Cheat
+
+```{r}
+grid$te_est = predict(tau_forest, newdata = grid)$predictions
+```
+
+### Visualize effects with a heatmap:
+
+```{python}
+ggplot(grid) + 
+  geom_rect(
+    aes(
+      xmin = educ - 0.25,
+      xmax = educ + 0.25,
+      ymin = priorearn - 2000, 
+      ymax = priorearn + 2000,
+      fill = te_est
+    )
+  ) +
+  labs(title = "Random Forest", x = NULL, y = NULL, fill = "Estimated Treatment Effect") +
+  scale_fill_viridis_c(option = "C") + 
+  theme_minimal(base_size = 16)
+```
+
+To do on your own: make similar visualizations for males, singles, whites, different ages, etc.
+
