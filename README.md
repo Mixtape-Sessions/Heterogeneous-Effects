@@ -43,5 +43,5 @@ The following is a set of readings for analyzing heterogeneous effects with mach
 
 ## Coding Labs
 
-1. [RCT to Regression](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/blob/main/Labs/python/ML_Heterogeneous_Effects.ipynb)
+1. [ML + Heterogeneous Effects](https://github.com/Mixtape-Sessions/Heterogeneous-Effects/blob/main/Labs/python/ML_Heterogeneous_Effects.ipynb)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mixtape-Sessions/Heterogeneous-Effects/blob/main/Labs/python/ML_Heterogeneous_Effects.ipynb)
