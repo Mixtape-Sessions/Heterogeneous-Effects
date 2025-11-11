@@ -1,0 +1,29 @@
+Variable	Description
+offeredmedicaid	Indicator for winning the Oregon Health Insurance lottery
+female_list	Indicator for female
+doc_num_mod	Number of doctor visits
+cost_borrow	Borrowed money/skipped bills to pay health care bills in last 6 months?
+race_hisp	
+race_black	
+edu	educational attainment category
+enrolledmedicaid	Indicator for enrolled in Medicaid
+ddddraw_sur_2	Control: survey wave x household size indicators
+ddddraw_sur_3	Control: survey wave x household size indicators
+ddddraw_sur_4	Control: survey wave x household size indicators
+ddddraw_sur_5	Control: survey wave x household size indicators
+ddddraw_sur_6	Control: survey wave x household size indicators
+ddddraw_sur_7	Control: survey wave x household size indicators
+dddnumhh_li_2	Control: survey wave x household size indicators
+dddnumhh_li_3	Control: survey wave x household size indicators
+ddddraXnum_2_2	Control: survey wave x household size indicators
+ddddraXnum_2_3	Control: survey wave x household size indicators
+ddddraXnum_3_2	Control: survey wave x household size indicators
+ddddraXnum_3_3	Control: survey wave x household size indicators
+ddddraXnum_4_2	Control: survey wave x household size indicators
+ddddraXnum_5_2	Control: survey wave x household size indicators
+ddddraXnum_6_2	Control: survey wave x household size indicators
+ddddraXnum_7_2	Control: survey wave x household size indicators
+fpl_categ	Federal poverty line income category
+notbaddays_tot	Number of days out of the past 30 of "not bad" or better health
+notbaddays_ment	Number of days out of the past 30 of "not bad" or better mental health
+age	age in 2008
